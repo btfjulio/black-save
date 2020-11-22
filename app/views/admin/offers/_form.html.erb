@@ -1,8 +1,9 @@
-<%= simple_form_for offer do |f| %>
+<%= simple_form_for [:admin, offer] do |f| %>
   <%= f.input :title %>
   <%= f.input :body, as: :text %>
   <%= f.input :price %>
   <%= f.input :coupon %>
+  <%= f.input :link %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>
