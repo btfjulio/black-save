@@ -1,7 +1,9 @@
-<% @offers.each do |offer| %>
-  <%= offer.title %>
-  <%= cl_image_tag offer.photo.key %>
-  <%= offer.body %>
-  <%= offer.coupon %>
-  <%= offer.price %>
-<% end %>
+<div class="offers">
+  <% @offers.each do |offer| %>
+    <div class="offer">
+      <%= cl_image_tag offer.photo.key %>
+      <h3><%= offer.title %></h3>
+      <p><span class="coin">R$</span><%= offer.price %></p>
+    </div>
+  <% end %>
+</div>
