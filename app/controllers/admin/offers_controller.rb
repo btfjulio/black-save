@@ -27,7 +27,7 @@ module Admin
     private 
 
     def offer_params 
-      params.require(:offer).permit(:title, :body, :link, :coupon)
+      params.require(:offer).permit(:title, :body, :link, :coupon, :price)
     end
 
     def set_offer 
