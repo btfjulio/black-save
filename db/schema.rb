@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_22_200805) do
     t.text "body"
     t.string "link"
     t.string "coupon"
+    t.decimal "price", precision: 10, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

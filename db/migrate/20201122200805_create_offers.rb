@@ -5,7 +5,7 @@ class CreateOffers < ActiveRecord::Migration[6.0]
       t.text :body
       t.string :link
       t.string :coupon
-
+      t.decimal :price, precision: 10, scale: 2
       t.timestamps
     end
   end
