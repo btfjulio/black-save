@@ -2,13 +2,13 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Nunito:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
 
 $color-primary: #c69963;
 $color-primary-dark: #B28451;
 
-$color-secondary: #101d2c;
+$black-primary: #101d2c;
+$black-secondary: #260603;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
@@ -18,7 +18,7 @@ $color-grey-dark-2: #6D5D4B;
 
 // FONT VARIABLES
 
-$font-primary: 'Nunito', sans-serif;
+$font-primary: 'Roboto', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
 *,
@@ -35,14 +35,13 @@ html {
 }
 
 body {
-  background-color: $color-grey-light-1;
+  padding: 20px;
+  background: linear-gradient(217deg, $black-primary, $black-secondary),;
   font-family: $font-primary;
   color: $color-grey-dark-2;
   font-weight: 300;
   line-height: 1.6;
-  margin-top: 20px;
 }
-
 
 
 .offers {
@@ -55,16 +54,34 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   height: 25rem;
   border-radius: 5px;
   box-shadow: 0px 1px 2px $color-grey-light-2;
   text-align: center; 
+  background-color: white;
   img {
     height: 50%;
-    width: 50%;
+    width: 80%;
+    object-fit: contain;
   }
   h3 {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 1.6rem;
+    width: 90%;
+  }
+  .coin, .digit {
+    font-weight: 400;
+    font-style: italic;
+  }
+  .digit {
+    font-size: 2rem;
+  }
+  .coin {
+    font-size: 1.6rem;
+  }
+  hr {
+    width: 80%;
   }
 }
