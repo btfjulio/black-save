@@ -3,7 +3,10 @@
     <div class="offer">
       <%= cl_image_tag offer.photo.key %>
       <h3><%= offer.title %></h3>
-      <p><span class="coin">R$</span><%= offer.price %></p>
+      <p>
+        <span class="coin">R$</span>
+        <span class="digit"><%= offer.price %></span>
+      </p>
     </div>
   <% end %>
 </div>
