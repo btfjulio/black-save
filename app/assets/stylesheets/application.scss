@@ -4,11 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
 
-$color-primary: #c69963;
-$color-primary-dark: #B28451;
+
 
 $black-primary: #101d2c;
 $black-secondary: #260603;
+$primary: #890620;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
@@ -36,18 +36,20 @@ html {
 
 body {
   padding: 20px;
-  background: linear-gradient(217deg, $black-primary, $black-secondary),;
   font-family: $font-primary;
-  color: $color-grey-dark-2;
+  color: $black-primary;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.6;
-}
+  background: linear-gradient(217deg, $color-grey-light-1, $color-grey-light-2);
+}   
 
 
 .offers {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
+
 }
 
 .offer {
@@ -67,21 +69,25 @@ body {
   }
   h3 {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 300;
+    font-style: italic;
     font-size: 1.6rem;
     width: 90%;
   }
   .coin, .digit {
-    font-weight: 400;
+    font-weight: 500;
+    color: $primary;
     font-style: italic;
   }
   .digit {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .coin {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   hr {
     width: 80%;
+    background-color: $primary;
+    height: 1px;
   }
 }
