@@ -1,13 +1,18 @@
 <div class="offers">
   <% @offers.each do |offer| %>
-    <div class="offer">
-      <%= cl_image_tag offer.photo.key %>
+    <div class="offer" data-controller="offer" data-action="click->offer#initModal">
+      <%= cl_image_tag offer.photo.key, data: { target: 'offer.photo' } %>
       <hr>
-      <h3><%= offer.title %></h3>
-      <p>
+      <h3 data-target="offer.title"><%= offer.title %></h3>
+      <p data-target="offer.price">
         <span class="coin">R$</span>
         <span class="digit"><%= offer.price %></span>
       </p>
+      <span class="coupon" data-target="offer.coupon" style="display:none;"><%= offer.coupon %></span>
+      <span class="body" data-target="offer.body" style="display:none;"><%= offer.body %></span>
+
     </div>
   <% end %>
 </div>
+
+<%= render "offer_modal" %>
