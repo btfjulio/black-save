@@ -66,6 +66,10 @@ html {
 }
 
 body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: $font-primary;
   color: $black-primary;
   font-size: 1.5rem;
