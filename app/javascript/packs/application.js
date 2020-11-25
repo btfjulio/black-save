@@ -16,4 +16,22 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import "controllers"
+import "controllers";
+import $ from "jquery";
+import "slick-carousel";
+
+const addSlick = () => {
+  $('.banners').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false
+  });
+}
+
+
+
+$( document ).on('turbolinks:load', function() {
+  addSlick();
+})
