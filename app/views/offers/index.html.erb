@@ -1,6 +1,6 @@
 <div class="offers">
   <% @offers.each do |offer| %>
-    <div class="offer" data-controller="offer" data-action="click->offer#initModal">
+    <div class="offer" data-controller="offer">
       <%= cl_image_tag offer.photo.key, data: { target: 'offer.photo' } %>
       <hr>
       <h3 data-target="offer.title"><%= offer.title %></h3>
@@ -10,7 +10,8 @@
       </p>
       <span class="coupon" data-target="offer.coupon" style="display:none;"><%= offer.coupon %></span>
       <span class="body" data-target="offer.body" style="display:none;"><%= offer.body %></span>
-
+      <span class="link" data-target="offer.link" style="display:none;"><%= offer.link %></span>
+      <span class="instructions" data-action="click->offer#initModal">Ver Instruções</span>
     </div>
   <% end %>
 </div>

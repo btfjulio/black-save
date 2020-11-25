@@ -1,4 +1,5 @@
 <div class="offer-modal" id="offer-modal" data-controller="modal" data-target="offer.modal">
+    <span class="close" data-action="click->modal#closeModal">X</span>
     <div class="modal-content">
         <div class="offer-info">
             <h3 class="message">SIGA OS PASSOS DA PROMOÇÃO</h3>
@@ -10,11 +11,12 @@
                     <span class="price" data-target="modal.price">R$</span>
                 </div>
             </div>
+            <div class="body" data-target="modal.body">
+            </div>
             <div class="modal-buttons" data-target="modal.coupon">
-                
             </div>
             <div class="modal-buttons">
-                <%= link_to "Me leve para Loja", "", class: "store-btn", data: { target: "modal.store" } %>
+                <%= link_to "Me leve para Loja", "", class: "store-btn", data: { target: "modal.link" } %>
             </div>
         </div>
     </div>

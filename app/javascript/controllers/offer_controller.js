@@ -4,7 +4,8 @@ import { Controller } from 'stimulus'
 export default class extends Controller {
     static targets = [
         "title", "body", "price", 
-        "photo", "modal", "coupon"
+        "photo", "modal", "coupon",
+        "link"
     ]
 
     setModalData() {
@@ -13,7 +14,8 @@ export default class extends Controller {
             price: this.priceTarget.innerText,
             body: this.bodyTarget.innerText,
             photo: this.photoTarget.src,
-            coupon: this.couponTarget.innerText
+            coupon: this.couponTarget.innerText,
+            link: this.linkTarget.innerText
         }
     }
 

@@ -12,20 +12,26 @@ import { Controller } from 'stimulus'
 export default class extends Controller {
 
     static targets = [
-        'title', 'photo', 'price', 'coupon'
+        'title', 'photo', 'price', 
+        'coupon', 'body', 'link'
      ];
 
 
-    setContent({photo, price, title, coupon = ''}) {
+    setContent({ photo, price, title, coupon = '', body, link }) {
         this.titleTarget.innerText = title;
         this.priceTarget.innerText = price;
         this.couponTarget.innerText = coupon;
+        this.bodyTarget.innerText = body;
         this.photoTarget.src = photo;
+        this.linkTarget.href = link;
     }
 
     launchModal(data) {
-        debugger
         this.setContent(data)
         this.element.classList.add("open");
+    }
+
+    closeModal() {
+        this.element.classList.remove("open")
     }
 }
