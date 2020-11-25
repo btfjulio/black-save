@@ -229,6 +229,7 @@ body {
     background-color: white;
     border: $pattern-border-semi;
     border-radius: 15px;
+    overflow: hidden;
     .modal-close {      
       position: absolute;
       right: 15px;
@@ -290,6 +291,13 @@ body {
         text-align: center;
       }
     }
+    .warning {
+      background-color: $primary;
+      color: $color-grey-light-1;
+      text-align: center;
+      padding: 7px 13px;
+      font-style: italic;
+    }
     @media only screen and (max-width: $bp-largest) {
       width: 50%;
       .offer-info {
@@ -300,28 +308,9 @@ body {
       }
     }
     @media only screen and (max-width: $bp-medium) {
-      width: 63%;
+      width: 84%;
       .offer-info {
         padding: 4% 8%;
-        .product-image {
-          width: 50%;
-        }
-      }
-    }
-    @media only screen and (max-width: $bp-small) {
-      width: 80%;
-      .offer-info {
-        .product-image {
-          width: 50%;
-        }
-      }
-    }
-    @media only screen and (max-width: $bp-smallest) {
-      width: 95%;
-      .offer-info {
-        .product-image {
-          width: 50%;
-        }
       }
     }
   }
