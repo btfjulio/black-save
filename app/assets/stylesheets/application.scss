@@ -53,15 +53,15 @@ html {
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 
   @media only screen and (max-width: $bp-largest) {
-    font-size: 58%;
+    font-size: 60%;
   }
 
   @media only screen and (max-width: $bp-large) {
-    font-size: 54%;
+    font-size: 58%;
   }
 
   @media only screen and (max-width: $bp-small) {
-    font-size: 52%;
+    font-size: 54%;
   }
 }
 
@@ -76,6 +76,16 @@ body {
   font-weight: 300;
   line-height: 1.6;
   background: $color-grey-light-1;
+  .main {
+    width: 80%;
+    margin: auto;
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 95%;
+    }
+  }
   @media only screen and (max-width: $bp-small) {
     padding-top: 5px;
   }
