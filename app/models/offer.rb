@@ -5,4 +5,6 @@ class Offer < ApplicationRecord
   validates :body, presence: true
   validates :link, presence: true
   validates :photo, presence: true
+
+  belongs_to :store, :inverse_of => :offers
 end
