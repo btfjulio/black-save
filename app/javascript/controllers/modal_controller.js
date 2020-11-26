@@ -16,11 +16,19 @@ export default class extends Controller {
         'coupon', 'body', 'link'
      ];
 
+    setCoupon({ coupon }) {
+        if (coupon) { 
+            this.couponTarget.style.display = 'block';
+            this.couponTarget.innerText = coupon;
+        } else {
+            this.couponTarget.style.display = 'none';
+        }
+    }
 
-    setContent({ photo, price, title, coupon = '', body, link }) {
+
+    setContent({ photo, price, title, body, link }) {
         this.titleTarget.innerText = title;
         this.priceTarget.innerText = price;
-        this.couponTarget.innerText = coupon;
         this.bodyTarget.innerText = body;
         this.photoTarget.src = photo;
         this.linkTarget.href = link;
@@ -28,6 +36,7 @@ export default class extends Controller {
 
     launchModal(data) {
         this.setContent(data)
+        this.setCoupon(data)
         this.element.classList.add("open");
     }
 

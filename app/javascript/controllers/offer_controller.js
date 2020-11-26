@@ -9,12 +9,13 @@ export default class extends Controller {
     ]
 
     setModalData() {
+        debugger
         return {
             title: this.titleTarget.innerText,
             price: this.priceTarget.innerText,
             body: this.bodyTarget.innerText,
             photo: this.photoTarget.src,
-            coupon: this.couponTarget.innerText,
+            coupon: this.hasCouponTarget ? this.couponTarget.innerText : "",
             link: this.linkTarget.innerText
         }
     }
