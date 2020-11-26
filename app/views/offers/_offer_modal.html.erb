@@ -2,7 +2,7 @@
     <div class="modal-content">
       <span class="modal-close" data-action="click->modal#closeModal"><i class="fas fa-times"></i></span>
       <div class="offer-info">
-        <h4 class="product-name" data-target="modal.title "></h4>
+        <h4 class="product-name" data-target="modal.title"></h4>
         <%= image_tag '', class: "product-image", data: { target: "modal.photo" } %>
         <div class="price">
             <span class="coin">R$</span><span class="value" data-target="modal.price"></span>
@@ -10,7 +10,7 @@
         <div class="body" data-target="modal.body">
         </div>
         <div class="modal-buttons">
-            <div class="coupon" data-target="modal.coupon" style="display:none"></div>
+            <div class="coupon" data-target="modal.coupon"></div>
             <%= link_to "Me leve para Loja", "", class: "main-btn", target: "_blank", data: { target: "modal.link" } %>
         </div>
       </div>

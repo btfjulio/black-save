@@ -9,9 +9,8 @@ export default class extends Controller {
     ]
 
     setModalData() {
-        debugger
         return {
-            title: this.titleTarget.innerText,
+            title: this.titleTarget.dataset.title,
             price: this.priceTarget.innerText,
             body: this.bodyTarget.innerText,
             photo: this.photoTarget.src,

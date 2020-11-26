@@ -9,7 +9,7 @@
     <div class="offer" data-controller="offer">
       <%= cl_image_tag offer.photo.key, data: { target: 'offer.photo' } %>
       <hr>
-      <h3 data-target="offer.title" data-body="<%= offer.title %>%"><%= offer.title.truncate(30) %></h3>
+      <h3 data-target="offer.title" data-title="<%= offer.title %>"><%= offer.title.truncate(30) %></h3>
       <p>
         <span class="coin">R$</span>
         <span class="digit" data-target="offer.price"><%= offer.price %></span>
