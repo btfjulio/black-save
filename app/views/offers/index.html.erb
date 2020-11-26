@@ -12,7 +12,7 @@
       <h3 data-target="offer.title" data-title="<%= offer.title %>"><%= offer.title.truncate(30) %></h3>
       <p>
         <span class="coin">R$</span>
-        <span class="digit" data-target="offer.price"><%= offer.price %></span>
+        <span class="digit" data-target="offer.price"><%= number_with_precision(offer.price, precision: 2) %></span>
       </p>
       <% if offer.coupon.present? %>
         <span class="coupon" data-target="offer.coupon" style="display:none;"><%= offer.coupon %></span>
