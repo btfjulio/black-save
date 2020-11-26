@@ -255,6 +255,9 @@ body {
     border: $pattern-border-semi;
     border-radius: 15px;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     .modal-close {      
       position: absolute;
       right: 15px;
@@ -271,6 +274,8 @@ body {
       padding: 7% 18%;
       height: 100%;
       width: 100%;
+      flex: 1;
+      overflow: scroll;
       .price {
         font-style: italic;
         font-weight: 500;
