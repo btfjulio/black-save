@@ -1,4 +1,6 @@
 class Offer < ApplicationRecord
+  after_validation :set_slug, only: %i(create, :update)
+
   has_one_attached :photo
 
   validates :title, presence: true
@@ -8,4 +10,7 @@ class Offer < ApplicationRecord
 
   belongs_to :store, :inverse_of => :offers
 
+  def set_slug
+    self.slug = title.to_s.parameterize
+  end 
 end

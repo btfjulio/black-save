@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :offers, only: %i(index show) do
     collection do
-      resources :stores, only: :show
+      resources :stores, only: %i(index show)
     end
   end
 

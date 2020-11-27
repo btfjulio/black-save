@@ -77,7 +77,10 @@ stores = [
   }
 ]
 
-stores.each do |store|
-  new_store = Store.create(store)
-  puts "Criada loja #{new_store.name}"
+# stores.each do |store|
+#   new_store = Store.create(store)
+#   puts "Criada loja #{new_store.name}"
+# end
+
+Offer.all.each do |offer|
 end
