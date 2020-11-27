@@ -7,4 +7,5 @@ class Offer < ApplicationRecord
   validates :photo, presence: true
 
   belongs_to :store, :inverse_of => :offers
+
 end
