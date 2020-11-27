@@ -1,8 +1,7 @@
 class Offer < ApplicationRecord
-  after_validation :set_slug, only: %i(create, :update)
+  after_validation :set_slug, only: %i(create, update)
   after_create :set_app_link
-
-
+  after_validation :update_app_link, only: %i(update), if: :will_save_change_to_slug?
   has_one_attached :photo
 
   validates :title, presence: true
@@ -11,6 +10,10 @@ class Offer < ApplicationRecord
   validates :photo, presence: true
 
   belongs_to :store, :inverse_of => :offers
+
+  def update_app_link
+    self.app_link = "savewhey.com.br/offers/#{self.to_param}"
+  end
 
   def set_app_link
     self.app_link = "savewhey.com.br/offers/#{self.to_param}"
