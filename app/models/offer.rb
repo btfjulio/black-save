@@ -1,6 +1,6 @@
 class Offer < ApplicationRecord
   after_validation :set_slug, only: %i(create, :update)
-  after_validation :set_app_link, only: %i(create, :update)
+  after_create :set_app_link
 
 
   has_one_attached :photo
@@ -14,6 +14,7 @@ class Offer < ApplicationRecord
 
   def set_app_link
     self.app_link = "savewhey.com.br/offers/#{self.to_param}"
+    self.save
   end
 
   def set_slug

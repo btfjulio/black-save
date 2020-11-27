@@ -25,10 +25,19 @@ export default class extends Controller {
         }
     }
 
+    setPrice({ price }) {
+        debugger
+        if (price && price > 1) { 
+            this.priceTarget.style.display = 'inline';
+            this.priceTarget.innerText = price;
+        } else {
+            this.priceTarget.style.display = 'none';
+        }
+    }
+
 
     setContent({ photo, price, title, body, link }) {
         this.titleTarget.innerText = title;
-        this.priceTarget.innerText = price;
         this.bodyTarget.innerText = body;
         this.photoTarget.src = photo;
         this.linkTarget.href = link;
@@ -37,6 +46,7 @@ export default class extends Controller {
     launchModal(data) {
         this.setContent(data)
         this.setCoupon(data)
+        this.setPrice(data)
         this.element.classList.add("open");
     }
 
