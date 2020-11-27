@@ -13,4 +13,8 @@ class Offer < ApplicationRecord
   def set_slug
     self.slug = title.to_s.parameterize
   end 
+  
+  def to_param
+    "#{id}-#{slug}"
+  end
 end

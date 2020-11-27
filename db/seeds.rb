@@ -83,4 +83,5 @@ stores = [
 # end
 
 Offer.all.each do |offer|
+  offer.update(slug: offer.title.parameterize)
 end
