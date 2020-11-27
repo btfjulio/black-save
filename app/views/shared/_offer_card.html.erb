@@ -1,5 +1,5 @@
 <div class="offer" data-controller="offer">
-  <%= cl_image_tag offer.photo.key, data: { target: 'offer.photo' } %>
+  <%= image_tag offer.src_image, data: { target: 'offer.photo' } %>
   <hr>
   <h3 data-target="offer.title" data-title="<%= offer.title %>"><%= offer.title.truncate(30) %></h3>
   <p style="<%= 'display:none;' unless (offer.price.present? && offer.price > 0.1) %>">

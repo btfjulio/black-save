@@ -3,7 +3,7 @@
       <span class="modal-close" data-action="click->modal#closeModal"><i class="fas fa-times"></i></span>
       <div class="offer-info">
         <h4 class="product-name" data-target="modal.title"><%= offer.title %></h4>
-        <%= cl_image_tag offer.photo.key, class: "product-image", data: { target: "modal.photo" } %>
+        <%= image_tag offer.src_image, class: "product-image", data: { target: "modal.photo" } %>
         <div class="modal-price" style="<%= 'display:none;' unless (offer.price.present? && offer.price > 0.1) %>">
             <span class="coin">R$</span><span class="value" data-target="modal.price"><%= number_with_precision(offer.price, precision: 2) %></span>
         </div>
