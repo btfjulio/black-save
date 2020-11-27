@@ -5,8 +5,10 @@
 </div>
 <div class="stores">
   <% @stores.each do |store| %>
-    <%= link_to store do %>
-      <%= image_tag store.logo, class: 'store-logo' %>
+    <% if store.logo.present? %>
+      <%= link_to store do %>
+        <%= image_tag store.logo, class: 'store-logo' %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
