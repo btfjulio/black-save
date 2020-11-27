@@ -1,5 +1,4 @@
 require 'mechanize'
-require 'pry'
 require "open-uri"
 
 
@@ -65,14 +64,6 @@ stores = [
     logo: 'net-logo.png'
   },
   {
-    name: 'Musculos na Web',
-    logo: 'mw-logo.png'
-  },
-  {
-    name: 'Corpo Ideal',
-    logo: 'ci-logo.png'
-  },
-  {
     name: 'Corpo Perfeito',
     logo: 'cp-logo.png'
   },
@@ -86,7 +77,7 @@ stores = [
   }
 ]
 
-stores.each do |store|
+stores.each do |store|``
   new_store = Store.create(store)
   puts "Criada loja #{new_store.name}"
 end
