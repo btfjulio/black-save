@@ -2,7 +2,13 @@
 <div class="banners">
   <%= image_tag "banner2.png", class: 'banner' %>
   <%= image_tag "banner2.png", class: 'banner' %>
-
+</div>
+<div class="stores">
+  <% @stores.each do |store| %>
+    <%= link_to store do %>
+      <%= image_tag store.logo, class: 'store-logo' %>
+    <% end %>
+  <% end %>
 </div>
 <div class="offers">
   <% @offers.each do |offer| %>
@@ -24,7 +30,7 @@
   <% end %>
 </div>
 
-<%= render "offer_modal" %>
+<%= render "shared/offer_modal" %>
 
 
 

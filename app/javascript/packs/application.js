@@ -28,6 +28,13 @@ const addSlick = () => {
     slidesToScroll: 1,
     arrows: false
   });
+  $('.stores').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: false
+  });
 }
 
 
