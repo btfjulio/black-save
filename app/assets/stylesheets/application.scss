@@ -319,6 +319,12 @@ body {
           text-decoration: none;
         }
       }
+      hr {
+        width: 80%;
+        height: 1.5px;
+        color: $color-grey-light-1;
+        margin: 0;
+      }
       .body {
         font-style: italic;
         text-align: center;
