@@ -83,5 +83,8 @@ stores = [
 # end
 
 Offer.all.each do |offer|
-  offer.update(slug: offer.title.parameterize)
+  offer.update!(
+    slug: offer.title.parameterize,
+    app_link: offer.set_app_link
+  )
 end
