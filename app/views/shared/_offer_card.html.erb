@@ -2,7 +2,7 @@
   <%= cl_image_tag offer.photo.key, data: { target: 'offer.photo' } %>
   <hr>
   <h3 data-target="offer.title" data-title="<%= offer.title %>"><%= offer.title.truncate(30) %></h3>
-  <p>
+  <p style="<%= 'display:none;' unless (offer.price.present? && offer.price > 0.1) %>">
     <span class="coin">R$</span>
     <span class="digit" data-target="offer.price"><%= number_with_precision(offer.price, precision: 2) %></span>
   </p>
