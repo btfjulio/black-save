@@ -33,7 +33,9 @@ const addSlick = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
-    arrows: false
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000
   });
 }
 
