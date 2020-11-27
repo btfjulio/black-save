@@ -26,12 +26,11 @@ export default class extends Controller {
     }
 
     setPrice({ price }) {
-        debugger
         if (price && price > 1) { 
-            this.priceTarget.style.display = 'inline';
+            document.querySelector('.modal-price').style.display = 'block';
             this.priceTarget.innerText = price;
         } else {
-            this.priceTarget.style.display = 'none';
+            document.querySelector('.modal-price').style.display = 'none';
         }
     }
 
