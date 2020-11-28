@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :set_offers_and_stores
-  
+
   def index 
   end
 
@@ -12,7 +12,7 @@ class OffersController < ApplicationController
   private
 
   def set_offers_and_stores
-    @offers = Offer.all.order(created_at: :desc)
+    @offers = Offer.where(hide: false).order(created_at: :desc)
     @stores = Store.all
   end
 end
