@@ -1,8 +1,6 @@
 require 'mechanize'
 require "open-uri"
 
-
-
 class SWApi
   BASE_URL = "https://savewhey-api.herokuapp.com/api/v2/base_suplements"
 
