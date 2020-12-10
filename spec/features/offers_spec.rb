@@ -6,7 +6,6 @@ RSpec.describe "Offers as :client", type: :feature do
 
   describe "offer index page" do
 
-    
     it "should show right amount of offers" do
       visit "/" 
       expect(page).to have_selector('.offer', count: offers.count)
@@ -21,7 +20,6 @@ RSpec.describe "Offers as :client", type: :feature do
       visit "/"
       offer = offers.sample
       find("#open_#{offer.id}").click
-
       expect(page).to have_selector(".open")
     end
 
