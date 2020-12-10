@@ -11,5 +11,5 @@
   <% end %>
   <span class="body" data-target="offer.body" style="display:none;"><%= offer.body %></span>
   <span class="link" data-target="offer.link" style="display:none;"><%= offer.link %></span>
-  <span class="main-btn" data-action="click->offer#initModal">Ver Instruções</span>
+  <span id="open_<%= offer.id %>" class="main-btn" data-action="click->offer#initModal">Ver Instruções</span>
 </div>

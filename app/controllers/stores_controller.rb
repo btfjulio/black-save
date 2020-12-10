@@ -1,10 +1,12 @@
 class StoresController < ApplicationController
   skip_before_action :authenticate_user!
+
   def show
     @store = Store.find(params[:id])
-    @offers = @store.offers.where(hide: false).order(created_at: :desc)
+    @offers = @store.offers.posted
     @stores = Store.all
 
     render :template => "offers/index"
   end
+  
 end

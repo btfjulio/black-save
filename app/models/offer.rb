@@ -15,6 +15,8 @@ class Offer < ApplicationRecord
   validates :body, presence: true
   validates :link, presence: true
 
+  scope :posted, -> { where(hide: false).order(created_at: :desc) }
+
   def src_image
     self.photo.attached? ? Cloudinary::Utils.cloudinary_url(photo.key) : 'placeholder.jpg'
   end
