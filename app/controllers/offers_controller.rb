@@ -18,7 +18,7 @@ class OffersController < ApplicationController
   end
 
   def set_offers_and_stores
-    @offers = Offer.where(hide: false).order(created_at: :desc)
+    @offers = Offer.posted
     @stores = Store.all
   end
 end
