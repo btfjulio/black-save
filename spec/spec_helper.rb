@@ -10,8 +10,8 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
 
-Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
+Capybara.register_driver :headless_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
-
-Capybara.javascript_driver = :selenium_chrome
+Capybara.javascript_driver = :headless_chrome

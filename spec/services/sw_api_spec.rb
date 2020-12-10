@@ -30,7 +30,7 @@ RSpec.describe SwApi, type: :model do
     it "should return an product hash example" do
       product = service.random_sup
       expected_keys = %i(title body coupon price link)
-      expect(product.keys).to contain_exactly(*expected_keys)
+      expect(product).to include(*expected_keys)
     end
   end
 

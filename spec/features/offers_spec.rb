@@ -17,10 +17,12 @@ RSpec.describe "Offers as :client", type: :feature do
       expect(page). to have_content('Faça parte das nossas redes sociais')
     end
 
-    it "should respond to click on offer" do
+    it "should respond to click on offer", js: true do
       visit "/"
       offer = offers.sample
-      find("#submit_#{offer.id}").click
+      find("#open_#{offer.id}").click
+
+      expect(page).to have_selector(".open")
     end
 
   end
