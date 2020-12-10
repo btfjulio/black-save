@@ -1,0 +1,16 @@
+.stores {
+  width: 100%;
+  .slick-slide {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .store-logo {
+    width: 100px !important;
+    @media only screen and (max-width: $bp-medium) {
+      width: 60px !important;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 50px !important;
+    }
+  }
+}
