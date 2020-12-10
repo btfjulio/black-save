@@ -5,40 +5,20 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+// resources
+@import "resources/colors.scss";
+@import "resources/fonts.scss";
+@import "resources/screens.scss";
+@import "resources/patterns.scss";
 
-// FONTS
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-// SCREENS
-
-$bp-largest: 80em; // 1200px
-$bp-large: 68.75em; // 1100px
-$bp-medium: 56.25em; // 900px
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 450px
+// COMPONENTS
+@import "components/index.scss";
 
 
-$black-primary: #101d2c;
-$black-secondary: #260603;
-$primary: #890620;
-
-$color-grey-light-1: #ebebeb;
-$color-grey-light-2: #aaa;
-
-$color-grey-dark-1: #54483a;
-$color-grey-dark-2: #6d5d4b;
-
-$pattern-border: 1px solid $color-grey-light-2;
-$pattern-border-semi: 1px solid $color-grey-light-1;
-$pattern-border-dark: 1px solid $color-grey-dark-2;
-$pattern-shadow: 0px 0px 2px $color-grey-light-1;
-$pattern-shadow-dark: 0px 3px 6px #000000;
 
 
 // FONT VARIABLES
 
-$font-primary: "Roboto", sans-serif;
-$font-display: "Josefin Sans", sans-serif;
 
 *,
 *::before,
@@ -89,19 +69,6 @@ body {
   }
   @media only screen and (max-width: $bp-small) {
     padding-top: 5px;
-  }
-}
-
-.offers {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-  margin: 30px 0px;
-  @media only screen and (max-width: $bp-largest) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media only screen and (max-width: $bp-small) {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
